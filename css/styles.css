@@ -1,0 +1,381 @@
+ /*
+Author: Ndabezinhle Moyo
+Date: 12/08/2023
+File Name: styles.css
+*/
+
+/* CSS Variables for easy theming */
+:root {
+  --primary-color: #373684;
+  --primary-hover: #2e2d6f;
+  --accent-color: #c0caf7;
+  --light-bg: #e5e9fc;
+  --highlight-color: #b7b7e1;
+  --white: #ffffff;
+  --text-dark: #000;
+  --text-light: #fff;
+  --link-color: #4645a8;
+  --email-color: #00f;
+  --btn-blue: #007BFF;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+aside,
+figure,
+figcaption {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* General Image Styling */
+img {
+  max-width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Typography & Layout */
+aside {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-shadow: 3px 3px 10px #8280cb;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+/* Checkbox Layout */
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.checkbox-container p {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+/* Figure and Caption */
+figure {
+  position: relative;
+  max-width: 275px;
+  margin: 2% auto;
+  border: 8px solid var(--primary-color);
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(55, 54, 132, 0.7);
+  color: var(--text-light);
+  padding: 5% 0;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+header h1 {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 0 auto;
+  padding: 1% 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  padding: 0 23px;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--primary-hover);
+  outline: none;
+}
+
+/* Main Content */
+main {
+  padding: 2%;
+  background-color: var(--light-bg);
+  overflow: auto;
+  font-size: 1.25em;
+}
+
+.action {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+#piano,
+#guitar,
+#violin,
+#rental {
+  margin: 0 2%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+#info {
+  background-color: var(--accent-color);
+  padding: 1% 2%;
+}
+
+#info ul {
+  margin-left: 10%;
+}
+
+.round {
+  border-radius: 8px;
+}
+
+#contact,
+#rental h2 {
+  text-align: center;
+}
+
+#contact .email-link {
+  color: var(--email-color);
+  text-decoration: underline;
+}
+
+.tel-link {
+  background-color: var(--primary-color);
+  padding: 2%;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.tel-link a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.5em;
+  display: block;
+}
+
+#contact a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.map {
+  border: 5px solid var(--primary-color);
+  width: 95%;
+  height: 50%;
+}
+
+/* Table Styles */
+table {
+  border: 1px solid var(--primary-color);
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+}
+
+caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1%;
+}
+
+th,
+td {
+  border: 1px solid var(--primary-color);
+  padding: 2%;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: 1.15em;
+}
+
+tr:nth-child(odd) {
+  background-color: var(--highlight-color);
+}
+
+/* Forms */
+fieldset,
+input {
+  margin-bottom: 2%;
+}
+
+fieldset legend {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: var(--btn-blue);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Paragraphs */
+p {
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.65em;
+  clear: both;
+}
+
+footer a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+@media screen and (max-width: 549px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    border-right: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 1em;
+    font-size: 1em;
+  }
+
+  .checkbox-container {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .map {
+    width: 100%;
+    height: auto;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* Responsive Design: Tablet */
+@media screen and (min-width: 550px), print {
+  .map {
+    width: 500px;
+    height: 450px;
+  }
+
+  .tab-desk {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  span.tab-desk {
+    display: inline;
+  }
+
+  nav li {
+    border-right: 1px solid var(--light-bg);
+    font-size: 1.5em;
+  }
+
+  nav li:last-child {
+    border-right: none;
+  }
+
+  nav li a {
+    padding: 0.25em 0.5em;
+  }
+}
